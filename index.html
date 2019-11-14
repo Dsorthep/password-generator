@@ -12,14 +12,18 @@
 
     <h1>Password Generator</h1>
 
+    
+
     <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4"></h1>
+              <h1 class="display-4">Your New Password</h1>
               <p class="lead"></p>
             </div>
     </div>
 
 <script>
+
+
 //Create a function to control the password generator
 function passGen() {
             
@@ -32,15 +36,15 @@ function passGen() {
 
     const nuCharChoice = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const nuRandomIndex = Math.floor(Math.random() * nuCharChoice.length);
-    console.log ('nuRandomIndex',nuRandomIndex);
+    console.log ('nuRandomIndex', nuRandomIndex);
 
     const loCharChoice = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     const loRandomIndex = Math.floor(Math.random() * loCharChoice.length);
-    console.log ("loRandomIndex",loRandomIndex);
+    console.log ("loRandomIndex", loRandomIndex);
 
     const upCharChoice = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     const upRandomIndex = Math.floor(Math.random() * upCharChoice.length);
-    console.log ("upRandomIndex",upRandomIndex);
+    console.log ("upRandomIndex", upRandomIndex);
 
     const compChoice = [spRandomIndex, nuRandomIndex, loRandomIndex, upRandomIndex];
 
