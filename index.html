@@ -10,15 +10,86 @@
 </head>
 <body>
 
+    <h1>Password Generator</h1>
+
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4"></h1>
+              <p class="lead"></p>
+            </div>
+    </div>
 
 <script>
 //Create a function to control the password generator
-
+function passGen() {
+            
 //Create constants and random indexes for each criteria
-
 //Create prompts for each contant criteria
+    const spCharChoice = [ '!', '@', '#', '$', '%', '^', '&'];
+    const spRandomIndex = Math.floor(Math.random() * spCharChoice.length);
+    console.log ("spRandomIndex", spRandomIndex);
+    
+
+    const nuCharChoice = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const nuRandomIndex = Math.floor(Math.random() * nuCharChoice.length);
+    console.log ('nuRandomIndex',nuRandomIndex);
+
+    const loCharChoice = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const loRandomIndex = Math.floor(Math.random() * loCharChoice.length);
+    console.log ("loRandomIndex",loRandomIndex);
+
+    const upCharChoice = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    const upRandomIndex = Math.floor(Math.random() * upCharChoice.length);
+    console.log ("upRandomIndex",upRandomIndex);
+
+    const compChoice = [spRandomIndex, nuRandomIndex, loRandomIndex, upRandomIndex];
+
+    const confirmSpCharChoice = confirm("Would you like to use special characters?");
+    const confirmNuCharChoice = confirm("Would you like to use numerical characters?");
+    const confirmLoCharChoice = confirm("Would you like to use lowercase characters?");
+    const confirmUpCharChoice = confirm("Would you like to use uppercase characters?");
 
 //Process the results of the password generator
+    if (confirmSpCharChoice){
+        console.log("spRandomIndex IN THE IF",spRandomIndex);
+        console.log(spCharChoice[spRandomIndex])
+    }
+        //else{
+        //  console.log();  
+        //}
+    if (confirmSpCharChoice, confirmNuCharChoice){
+        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex);
+        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex])
+    }
+        //else{
+        //    console.log();
+        //}
+    if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice){
+        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex);
+        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex])
+    }
+        //else{
+        //    console.log();
+        //}
+    if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice, confirmUpCharChoice){
+        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex + "upRandomIndex IN THE IF", upRandomIndex)
+        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex] + upCharChoice[upRandomIndex])
+    }
+        //else{
+        //    console.log();
+        //}
+    for (let i = 0; i < spCharChoice.length; i++){
+    }
+    for (let i = 0; i < nuCharChoice.length; i++){
+    }
+    for (let i = 0; i < loCharChoice.length; i++){
+    }
+    for (let i = 0; i < upCharChoice.length; i++){
+    }
+
+}
+passGen();
+
 
 </script>
 
