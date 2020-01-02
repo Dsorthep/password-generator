@@ -65,6 +65,31 @@
             lowercaseChar();
             uppercaseChar();
         }
+
+        // FUNCTIONS FOR EACH CRITERIA TO RANDOMLY SELECT CHARACTERS FOR PW
+            function specialChar(){
+                if(special){
+                     password += charChoice.special[Math.floor(Math.random() * charChoice.special.length)];
+                }
+            }
+
+            function numberChar(){
+                if(number){
+                    password += charChoice.number[ Math.floor(Math.random() * charChoice.number.length) ];
+                }
+            }
+
+            function lowercaseChar(){
+                if(lowercase){
+                    password += charChoice.lowercase[ Math.floor(Math.random() * charChoice.lowercase.length) ];
+                } 
+            }
+
+            function uppercaseChar(){
+                if(uppercase) {
+                    password += charChoice.uppercase[Math.floor(Math.random() * charChoice.uppercase.length) ];  
+                }
+            }
     
 
     
