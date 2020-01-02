@@ -38,57 +38,69 @@
     
 
 
-    
-    //Create a function to control the password generator
-function passGen() {
+// CREATING A FUNCTION TO START PASSWORD CRITERIA QUESTIONS
+    function passGen() {
 
-    const confirmSpCharChoice = confirm("Would you like to use special characters?");
-    const confirmNuCharChoice = confirm("Would you like to use numerical characters?");
-    const confirmLoCharChoice = confirm("Would you like to use lowercase characters?");
-    const confirmUpCharChoice = confirm("Would you like to use uppercase characters?");
+    // INITIAL QUESTION TO DETERMINE PW LENGTH
+        const charLength = parseInt(window.prompt("How many characters would you like your password to contain?"));
+
+    // DIFFERENT CHARACTER CONFIRMATIONS AND SETTING PW LENGTH
+        if(!isNaN(charLength) && charLength <= 128) {
+            const special = confirm("Would you like to use special characters?");
+            const number = confirm("Would you like to use numerical characters?");
+            const lowercase = confirm("Would you like to use lowercase characters?");
+            const uppercase = confirm("Would you like to use uppercase characters?");
+        }
+
+        else{
+            alert("Maximum password length is 128 characters");
+        // EXECUTES THE passGen FUNCTION
+            passGen();
+        }
+    
 
     
 
 //Process the results of the password generator
-    if (confirmSpCharChoice){
-        console.log("spRandomIndex IN THE IF",spRandomIndex);
-        console.log(spCharChoice[spRandomIndex])
-    }
+    // if (confirmSpCharChoice){
+    //     console.log("spRandomIndex IN THE IF",spRandomIndex);
+    //     console.log(spCharChoice[spRandomIndex])
+    // }
         //else{
         //  console.log();  
         //}
-    if (confirmSpCharChoice, confirmNuCharChoice){
-        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex);
-        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex])
-    }
+    // if (confirmSpCharChoice, confirmNuCharChoice){
+    //     console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex);
+    //     console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex])
+    // }
         //else{
         //    console.log();
         //}
-    if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice){
-        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex);
-        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex])
-    }
+    // if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice){
+    //     console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex);
+    //     console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex])
+    // }
         //else{
         //    console.log();
         //}
-    if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice, confirmUpCharChoice){
-        console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex + "upRandomIndex IN THE IF", upRandomIndex)
-        console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex] + upCharChoice[upRandomIndex])
-    }
+    // if (confirmSpCharChoice, confirmNuCharChoice, confirmLoCharChoice, confirmUpCharChoice){
+    //     console.log("spRandomIndex IN THE IF", spRandomIndex + "nuRandomIndex IN THE IF", nuRandomIndex + "loRandomIndex IN THE IF", loRandomIndex + "upRandomIndex IN THE IF", upRandomIndex)
+    //     console.log(spCharChoice[spRandomIndex] + nuCharChoice[nuRandomIndex] + loCharChoice[loRandomIndex] + upCharChoice[upRandomIndex])
+    // }
         //else{
         //    console.log();
         //}
-    for (let i = 0; i < spCharChoice.length; i++){
-    }
-    for (let i = 0; i < nuCharChoice.length; i++){
-    }
-    for (let i = 0; i < loCharChoice.length; i++){
-    }
-    for (let i = 0; i < upCharChoice.length; i++){
-    }
+//     for (let i = 0; i < spCharChoice.length; i++){
+//     }
+//     for (let i = 0; i < nuCharChoice.length; i++){
+//     }
+//     for (let i = 0; i < loCharChoice.length; i++){
+//     }
+//     for (let i = 0; i < upCharChoice.length; i++){
+//     }
 
-}
-passGen();
+// }
+// passGen();
 
 
 </script>
